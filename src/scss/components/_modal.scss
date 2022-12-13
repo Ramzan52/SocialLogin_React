@@ -1,0 +1,26 @@
+.modalDrawer {
+  padding: 0 !important;
+  .modal-dialog {
+    margin: 0;
+    margin-left: auto;
+    height: 100%;
+    transform: translateX(100%) !important;
+    .modal-content {
+      border: none;
+      height: 100%;
+      border-radius: 0;
+      overflow-y: auto;
+    }
+  }
+  &.show {
+    .modal-dialog {
+      transform: translateX(0) !important;
+    }
+  }
+
+  form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}

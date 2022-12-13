@@ -1,0 +1,107 @@
+h2 {
+  font-size: $font28;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: $font26;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+h4 {
+  font-size: $font16;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+p {
+  margin-bottom: 16px;
+}
+.title-page {
+  font-size: $font24;
+  font-weight: 500;
+}
+
+a:focus {
+  outline: none;
+  outline-offset: inherit;
+}
+
+button:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: transparent;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+.css-14el2xx-placeholder {
+  font-size: 14px !important;
+}
+
+.heading1 {
+  @include Roboto(500);
+  font-size: $font24;
+}
+
+.icon-append {
+  position: relative;
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 15px;
+    color: $icon-color;
+    pointer-events: none;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.ctaIcon-blue {
+  color: $blue;
+}
+
+.ctaIcon-green {
+  color: $green;
+}
+
+// .text-blue {
+//   color: $blue !important;
+// }
+
+// .text-green {
+//   color: $green !important;
+// }
+.cta-success {
+  color: #50cd89;
+  background-color: #e8fff3;
+}
+.cta-warning {
+  color: #ffc700;
+  background-color: #fff8dd;
+}
+
+.cta-danger {
+  background-color: rgba(255, 77, 77, 0.3);
+  color: #ff4d4d;
+}
+.text-waiting {
+  color: #ffc700 !important;
+}

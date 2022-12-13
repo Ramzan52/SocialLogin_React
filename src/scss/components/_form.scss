@@ -1,0 +1,322 @@
+label {
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+
+  small {
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: 400;
+  }
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.tab-border {
+  .nav-tabs {
+    border: none;
+  }
+  .tab-content {
+    padding: 20px;
+    border: 1px solid #eee;
+  }
+
+  .footer-card {
+    padding: 20px 0 0;
+  }
+}
+
+.form-control {
+  height: 48px;
+  border-radius: 5px;
+  background: $white-300;
+  border: 1px solid $white-300;
+  font-size: 16px;
+  &:disabled{
+    cursor: not-allowed;
+  }
+}
+.form-control:focus {
+  outline: none;
+  outline-offset: inherit;
+  border: 1px solid $white-300;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.has-error label {
+  color: red;
+}
+
+.has-error input,
+.has-error input:focus {
+  border-color: red;
+}
+textarea.form-control {
+  height: auto;
+}
+.form-control::placeholder {
+  color: $text-light;
+}
+
+.checkbox-style {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  & + label {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+    span {
+      flex: 1;
+    }
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      border: 1px solid $border;
+    }
+  }
+  &:checked {
+    & + label {
+      &:before {
+        background-color: $primary-blue;
+      }
+    }
+  }
+}
+
+.radio-style {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  & + label {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+    span {
+      flex: 1;
+    }
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      border: 1px solid $border;
+      @include border-radius(50%);
+      margin-right: 10px;
+      transition: background 0.3s;
+    }
+  }
+  &:checked {
+    + label {
+      &:before {
+        background: $primary-blue;
+        box-shadow: inset 0px 0px 0px 2px #fff;
+      }
+    }
+  }
+}
+.autoSearch {
+  position: relative;
+  div {
+    width: 100%;
+    input {
+      width: 100%;
+      height: 48px;
+      border-radius: 5px;
+      background: $white-300;
+      border: 1px solid $white-300;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      padding: 0.375rem 0.75rem;
+    }
+  }
+  .menu {
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    z-index: 999;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    @include border-radius(5px);
+    .menu-item {
+      padding: 10px 15px;
+    }
+  }
+}
+.css-1hb7zxy-IndicatorsContainer {
+  background-color: $white-300;
+}
+.css-1okebmr-indicatorSeparator {
+  display: none;
+}
+.select-field .css-1pahdxg-control:hover,
+.select-field .css-1pahdxg-control:focus,
+.select-field .css-1s2u09g-control,
+.select-field .css-319lph-ValueContainer {
+  height: 100%;
+  min-height: 48px;
+  background: $white-300;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.switch {
+  position: relative;
+  width: 130px;
+  height: 36px;
+  overflow: hidden;
+  background-color: $white-300;
+  padding: 3px;
+}
+.knobs {
+  position: absolute;
+
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  z-index: 2;
+  display: flex;
+  margin: 0;
+  cursor: pointer;
+}
+.knobs:before {
+  content: "Active";
+  z-index: 5;
+}
+.knobs span {
+  width: 50%;
+
+  z-index: 2;
+  display: inline-flex;
+  position: absolute;
+  height: 100%;
+  transition: all 0.3s;
+  right: 0;
+}
+.knobs:after {
+  content: "InActive";
+
+  z-index: 5;
+}
+
+.knobs:before,
+.knobs:after {
+  width: 50%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: $white-300;
+}
+
+.switch .checkbox:checked + .knobs:after,
+.switch .checkbox:checked + .knobs:before {
+  color: $white-300;
+  z-index: 5;
+}
+
+.switch .checkbox + .knobs:after {
+  color: $white-300;
+  z-index: 5;
+}
+.switch .checkbox:checked + .knobs span {
+  transform: translateX(-100%);
+  background-color: $primary-blue;
+}
+
+.switch .checkbox + .knobs span {
+  background-color: $primary-blue;
+  transform: translateX(0%);
+}
+
+.fileUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include border-radius(5px);
+  border: 1px solid $border;
+  border-style: dashed;
+  padding: 30px 20px;
+  i {
+    color: $primary-blue;
+    margin-bottom: 10px;
+  }
+  h4 {
+    margin-bottom: 10px;
+  }
+}
+
+.checkboxHolder {
+  display: flex;
+  align-items: center;
+  label {
+    margin-right: 15px;
+  }
+}
+
+.uploadFile {
+  + {
+    label {
+      background: $primary-blue;
+      color: #fff;
+    }
+  }
+}
+
+.contentLeft {
+  flex: 1;
+}
+
+.pickerMain {
+  .react-datepicker {
+    display: flex;
+  }
+  .react-datepicker-time__header {
+    color: #fff;
+  }
+
+  .react-datepicker__time-box {
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+}

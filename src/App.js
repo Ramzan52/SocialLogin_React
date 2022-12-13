@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Login from "./screens/Login";
+import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
+import { app } from "./firebase-config";
+import "react-toastify/dist/ReactToastify.css";
+
+import { ToastContainer } from "react-toastify";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
+
+import "./Style.scss";
+import Dashboard from "./screens/Dashboard";
+import Home from "./screens/Home";
 
 function App() {
+  let navigate = useNavigate();
+
+  // useEffect(() => {
+  //   let authToken = localStorage.getItem("Auth Token");
+
+  //   if (authToken) {
+  //     navigate("/home");
+  //   }
+  // }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/home" element={<Home />}></Route>
+
+        <Route path="/login" element={<Login title="Login" />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </>
   );
 }
 

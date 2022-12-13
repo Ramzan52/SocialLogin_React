@@ -1,0 +1,154 @@
+.btn {
+  transition: all 0.3s;
+  min-width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.btn-outline-default {
+    border: 1px solid $border;
+
+    &:hover {
+      background-color: $primary-blue;
+      color: $white;
+    }
+  }
+
+  &.btn-outline-primary {
+    background-color: $white;
+    border: 1px solid $primary-blue;
+    color: $primary-blue;
+    
+    &:hover {
+      background-color: $primary-blue;
+      color: $white;
+    }
+  }
+
+  i {
+    display: inline-block;
+    transition: all 0.1s;
+
+    &.next {
+      margin-left: 5px;
+    }
+
+    &.prev {
+      margin-right: 5px;
+    }
+  }
+
+  &:hover {
+    i {
+      &.next {
+        transform: translateX(5px);
+      }
+    }
+
+    i {
+      &.prev {
+        transform: translateX(-5px);
+      }
+    }
+  }
+
+  &.btn-primary {
+    background-color: $primary-blue;
+    border-color: $primary-blue;
+    color: $white !important;
+
+    i {
+      color: $white !important;
+    }
+    &:hover {
+      background-color: #10999f;
+      color: $white;
+    }
+  }
+}
+
+.nav-tabs {
+  margin: 0 -1.5px;
+
+  li {
+    &.nav-item {
+      .nav-link {
+        color: $text-primary;
+        background-color: $white-300;
+        border: 1px solid $border;
+        border-radius: 0;
+        margin: 0 1.5px;
+
+        &.active {
+          background-color: $primary-blue;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.dropFiles {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+
+  &+label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    @include border-radius(5px);
+    border: 1px solid $primary-blue;
+    border-style: dashed;
+    cursor: pointer;
+
+    span {
+      display: block;
+      line-height: 1;
+      margin: 5px 0;
+    }
+  }
+}
+
+.ctaAction {
+  display: flex;
+  align-items: center;
+
+  li {
+    padding: 0 10px;
+
+    i {
+      svg {
+        width: 24px !important;
+        height: 24px !important;
+      }
+    }
+
+    .edit {
+      color: $primary-blue;
+    }
+
+    .del {
+      color: $red;
+    }
+    a{
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.cta-primary{
+  color: $primary-blue;
+  &:hover{
+    
+  color: $primary-blue;
+  text-decoration: underline;
+  }
+}

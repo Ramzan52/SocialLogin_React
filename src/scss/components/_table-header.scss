@@ -1,0 +1,70 @@
+.table-header {
+  margin-bottom: 12px;
+  background-color: $white;
+  form {
+    .form-control {
+      border: 1px solid $text-light;
+    }
+
+    &.tableSearch {
+      position: relative;
+      max-width: 254px;
+      margin-left: auto;
+      .form-control {
+      }
+      i {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 15px;
+        color: $text-light;
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
+.table-card {
+  background-color: $white;
+  margin-top: -100px;
+  padding: 30px 15px;
+  @include border-radius(20px);
+  .card {
+    margin: 0 !important;
+  }
+}
+
+.filterSearch {
+  form {
+    position: relative;
+    max-width: 254px;
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 15px;
+      color: $text-light;
+      svg {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+.tableSearch {
+  position: relative;
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 15px;
+    color: $text-light;
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}

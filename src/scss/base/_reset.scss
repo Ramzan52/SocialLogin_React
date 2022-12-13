@@ -1,0 +1,389 @@
+body {
+  font-size: 16px;
+  line-height: 1.4;
+  color: $text-primary;
+  background-color: $bg-gray;
+  min-height: 100vh;
+  font-weight: 400;
+  .h-full {
+    min-height: 100vh;
+  }
+}
+
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+  outline: 0 !important;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.p-30 {
+  padding: 30px;
+}
+/* width */
+
+.container-fluid {
+  padding: 0 30px;
+}
+
+.select-field .css-1s2u09g-control,
+.select-field .css-319lph-ValueContainer {
+  height: 44px;
+  border-color: $white-300;
+  background-color: $white-300;
+  @include border-radius(5px);
+}
+.select-field {
+  height: 44px;
+  &.multifield{
+    height: auto;
+  }
+  .css-1pahdxg-control {
+    outline: none;
+    box-shadow: none !important;
+    border: 1px solid $primary-blue;
+    &:hover,
+    &:focus {
+      border: 1px solid $primary-blue !important;
+    }
+  }
+  .css-1okebmr-indicatorSeparator {
+    display: none;
+    background-color: $white-300 !important;
+  }
+  .css-1s2u09g-control {
+    &:hover {
+      border: 1px solid $white-300;
+    }
+  }
+}
+
+.css-1hb7zxy-IndicatorsContainer {
+  background-color: $white-300;
+  border-radius: 5px;
+}
+
+.shadow-5 {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.07),
+    0 10px 10px -5px rgba(0, 0, 0, 0.05) !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.simplebar-scrollbar:before {
+  opacity: 0.7;
+  background-color: $primary-blue;
+}
+
+.main-content {
+  padding-bottom: 30px;
+}
+
+.css-1pahdxg-control:hover {
+  border-color: $primary-blue;
+}
+
+.filterSearch {
+  display: flex;
+  justify-content: flex-end;
+  form {
+    flex: 1;
+  }
+  .btn {
+    margin-left: 15px;
+  }
+}
+
+.css-qc6sy-singleValue {
+  font-size: 14px;
+}
+
+.content-main {
+  padding: 0 30px;
+}
+
+.page-title {
+  padding: 15px 0;
+  h3 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    .cta-back{
+      background-color: $primary-blue;
+      color: $white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+  }
+}
+
+i {
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+// AUTOCOMPLETE
+
+.react-autocomplete-input {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  bottom: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  display: block;
+  font-size: 14px;
+  list-style: none;
+  padding: 1px;
+  position: absolute;
+  text-align: left;
+  z-index: 20000;
+}
+
+.react-autocomplete-input > li {
+  cursor: pointer;
+  padding: 10px;
+  min-width: 100px;
+}
+
+.react-autocomplete-input > li.active {
+  background-color: #337ab7;
+  color: #fff;
+}
+.react-autocomplete-input {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  bottom: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  display: block;
+  font-size: 14px;
+  list-style: none;
+  padding: 1px;
+  position: absolute;
+  text-align: left;
+  z-index: 20000;
+}
+
+.react-autocomplete-input > li {
+  cursor: pointer;
+  padding: 10px;
+  min-width: 100px;
+}
+
+.react-autocomplete-input > li.active {
+  background-color: #337ab7;
+  color: #fff;
+}
+.react-autocomplete-input {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  bottom: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  display: block;
+  font-size: 14px;
+  list-style: none;
+  padding: 1px;
+  position: absolute;
+  text-align: left;
+  z-index: 20000;
+}
+.react-autocomplete-input > li {
+  cursor: pointer;
+  padding: 10px;
+  min-width: 100px;
+}
+.react-autocomplete-input > li.active {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.dataList {
+  min-width: 100%;
+}
+
+.badge-hold {
+  color: $warning;
+}
+
+.badge-status {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-status:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.badge-status:before {
+  background-color: $warning;
+}
+
+.badge-success {
+  color: $green;
+}
+.badge-success:before {
+  background-color: $green;
+}
+
+.badge-danger {
+  color: $danger;
+}
+
+.badge-danger:before {
+  background-color: $danger;
+}

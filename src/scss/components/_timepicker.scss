@@ -1,0 +1,81 @@
+.icon-append {
+  .rc-time-picker {
+    width: 100%;
+    outline: none;
+  }
+  .rc-time-picker-input {
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid $white-300;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    background-color: $white-300;
+  }
+}
+.rc-time-picker-panel-inner {
+  display: block;
+}
+.rc-time-picker-panel-input-wrap {
+  height: 44px;
+  padding: 0;
+}
+.rc-time-picker-panel-inner {
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+}
+
+.rc-time-picker-panel-input {
+  color: #212529;
+  height: 44px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  left: 1px;
+  top: 3px;
+  padding: 0 7px;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+.rc-time-picker-panel-combobox,
+.rc-time-picker-panel-input-wrap {
+  width: 300px;
+}
+.rc-time-picker-panel-combobox {
+  display: flex;
+  background-color: $white;
+  @include border-radius(10px);
+}
+.rc-time-picker-panel-select {
+  flex: 1;
+}
+
+.rc-time-picker-panel-select li {
+  font-size: $font16;
+  padding: 5px 16px;
+  height: auto;
+  @include border-radius(5px);
+}
+.rc-time-picker-panel-select li:hover {
+  background-color: $primary-blue;
+  color: $white;
+}
+li.rc-time-picker-panel-select-option-selected {
+  background-color: $white-600;
+}
+
+.rc-time-picker-panel-select::-webkit-scrollbar {
+  width: 5px;
+}
+.rc-time-picker-panel-select::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.rc-time-picker-panel-select::-webkit-scrollbar-thumb {
+  background: $primary-blue;
+}
+.rc-time-picker-panel-select::-webkit-scrollbar-thumb:hover {
+  background: $primary-blue;
+}
